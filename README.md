@@ -1,50 +1,94 @@
-# React + TypeScript + Vite
+MyMedCompass
+MyMedCompass is a web platform designed to help users find, export, and share information about hospitals within Nigeria. Built using modern web technologies, it integrates with Mapbox API for geolocation and Firebase for authentication and data management.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NOTE: MyMedCompass IS CURRENTLY A WORK IN PROGRESS. I AM ACTIVELY WORKING ON ADDITIONAL FEATURES AND IMPROVEMENTS TO FULLY REALIZE ITS GOALS AND OBJECTIVES. PLEASE CHECK BACK FOR UPDATES AND FEEL FREE TO CONTRIBUTE! 
+Thank you. 
 
-Currently, two official plugins are available:
+Features
+Hospital Search: Users can search for hospitals based on their location.
+Export to CSV: Export hospital lists to a CSV file.
+Share via Email/Link: Share hospital information via email or a shareable link.
+Admin Panel: Admins can manage hospital data through a secure login system.
+Markdown Editor: Create and format hospital entries using Markdown.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Technologies Used
+Frontend: React, TypeScript, Vite, Tailwind CSS, Material-UI (MUI)
+Backend: Firebase (Authentication, Firestore, Storage)
+APIs: Mapbox API for hospital data
+Utilities: Axios for HTTP requests, PapaParse for CSV handling
 
-## Expanding the ESLint configuration
+Installation
+Clone the repository:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+bash
+Copy code
+git clone https://github.com/your-username/my-med-compass.git
+Navigate to the project directory:
 
-- Configure the top-level `parserOptions` property like this:
+bash
+Copy code
+cd my-med-compass
+Install dependencies:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+bash
+Copy code
+npm install
+Create a .env file in the root of the project and add your Firebase and Mapbox credentials:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+env
+Copy code
+VITE_FIREBASE_API_KEY=your_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_firebase_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_firebase_app_id
+VITE_MAPBOX_ACCESS_TOKEN=your_mapbox_access_token
+Run the development server:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+bash
+Copy code
+npm run dev
+Deployment
+To deploy the application on Firebase Hosting:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Build the application:
+
+bash
+Copy code
+npm run build
+Initialize Firebase in your project if you haven't already:
+
+bash
+Copy code
+firebase init
+Deploy to Firebase:
+
+bash
+Copy code
+firebase deploy
+
+Acknowledgments
+Altschool Africa: Special thanks to Altschool Africa for their support and guidance throughout this amazing journey. 
+Contributing
+Fork the repository.
+
+Create a feature branch:
+
+bash
+Copy code
+git checkout -b feature/your-feature
+Commit your changes:
+
+bash
+Copy code
+git commit -am 'Add new feature'
+Push to the branch:
+
+bash
+Copy code
+git push origin feature/your-feature
+Create a new Pull Request.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
